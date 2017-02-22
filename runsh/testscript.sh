@@ -132,12 +132,8 @@ get_params() {
 
 create_out_state() {
   echo "-----> Creating a state file for $TEST_RES_IMG_OUT_UP"
-  echo TEST_VERSION=$TEST_VERSION
-  echo JOB_STATE=$JOB_STATE
-  echo TEST_RES_IMAGE_OUT=$TEST_RES_IMAGE_OUT
-  echo TEST_REPO_COMMIT=$TEST_REPO_COMMIT
   echo versionName=$TEST_VERSION > "$JOB_STATE/$TEST_RES_IMAGE_OUT.env"
-  echo commitSHA=$TEST_REPO_COMMIT >> "$JOB_STATE/$TEST_RES_IMAGE_OUT.env"
+  echo commitSHA=$TEST_REPO_COMMIT >> "$JOB_STATE/$TEST_RES_IMAGE_OUT.env" 
   
   echo "-----> Creating a state file for $TEST_CURR_JOB"
   echo versionName=$TEST_VERSION > "$JOB_STATE/$TEST_CURR_JOB.env"
