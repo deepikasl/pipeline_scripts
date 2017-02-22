@@ -29,7 +29,7 @@ echo PACKER_VERSION=$(packer version)
 echo TERRAFORM_VERSION=$(terraform --version)
 
 echo "-----> runSh Job variables"
-echo SUBSCRIPTION_ID=$(#SUBSCRIPTION_ID)
+echo SUBSCRIPTION_ID=${#SUBSCRIPTION_ID}
 echo RUNSH_RES_ID=$RESOURCE_ID
 echo RUNSH_JOB_NAME=$JOB_NAME
 echo RUNSH_JOB_TYPE=$JOB_TYPE
