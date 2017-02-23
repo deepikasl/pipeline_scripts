@@ -13,7 +13,7 @@ export TEST_RES_REPO_STATE=$(eval echo "$"$TEST_RES_REPO_UP"_STATE")
 
 export TEST_CURR_JOB_UP=$(echo $TEST_CURR_JOB | awk '{print toupper($0)}')
 echo TEST_CURR_JOB=$JOB_NAME
-echo TEST_CURR_JOB_UP=TEST_CURR_JOB_UP
+echo TEST_CURR_JOB_UP=$TEST_CURR_JOB_UP
 
 #get dockerhub EN string
 export TEST_RES_DH_UP=$(echo $TEST_RES_DH | awk '{print toupper($0)}')
