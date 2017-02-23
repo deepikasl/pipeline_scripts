@@ -11,6 +11,8 @@ export TEST_RES_IMAGE_OUT="test_out_img"
 export TEST_RES_REPO_UP=$(echo $TEST_RES_REPO | awk '{print toupper($0)}')
 export TEST_RES_REPO_STATE=$(eval echo "$"$TEST_RES_REPO_UP"_STATE")
 
+export TEST_CURR_JOB_UP=$(echo $TEST_CURR_JOB | awk '{print toupper($0)}')
+
 #get dockerhub EN string
 export TEST_RES_DH_UP=$(echo $TEST_RES_DH | awk '{print toupper($0)}')
 export TEST_RES_DH_INT_STR=$TEST_RES_DH_UP"_INTEGRATION"
@@ -42,12 +44,12 @@ echo RUNSH_JOB_STATE=$JOB_STATE
 echo RUNSH_JOB_PREVIOUS_STATE=$JOB_PREVIOUS_STATE
 echo RUNSH_JOB_MESSAGE_PATH=$JOB_MESSAGE
 
-export TEST_JOBNAME_NAME=$(eval echo "$"$JOB_NAME"_NAME")
-export TEST_JOBNAME_TYPE=$(eval echo "$"$JOB_NAME"_TYPE")
-export TEST_JOBNAME_PATH=$(eval echo "$"$JOB_NAME"_PATH")
-export TEST_JOBNAME_PREVIOUS_STATE=$(eval echo "$"$JOB_NAME"_PREVIOUS_STATE")
-export TEST_JOBNAME_STATE=$(eval echo "$"$JOB_NAME"_STATE")
-export TEST_JOBNAME_MESSAGE=$(eval echo "$"$JOB_NAME"_MESSAGE")
+export TEST_JOBNAME_NAME=$(eval echo "$"$TEST_CURR_JOB_UP"_NAME")
+export TEST_JOBNAME_TYPE=$(eval echo "$"$TEST_CURR_JOB_UP"_TYPE")
+export TEST_JOBNAME_PATH=$(eval echo "$"$TEST_CURR_JOB_UP"_PATH")
+export TEST_JOBNAME_PREVIOUS_STATE=$(eval echo "$"TEST_CURR_JOB_UP"_PREVIOUS_STATE")
+export TEST_JOBNAME_STATE=$(eval echo "$"$TEST_CURR_JOB_UP"_STATE")
+export TEST_JOBNAME_MESSAGE=$(eval echo "$"$TEST_CURR_JOB_UP"_MESSAGE")
 
 echo TEST_JOBNAME_NAME=$TEST_JOBNAME_NAME
 echo TEST_JOBNAME_TYPE=$TEST_JOBNAME_TYPE
