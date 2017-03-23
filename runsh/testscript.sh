@@ -128,11 +128,11 @@ get_params() {
   export TEST_RES_PARAMS_UP=$(echo $TEST_RES_PARAMS | awk '{print toupper($0)}')
   export TEST_RES_PARAMS_STR=$TEST_RES_PARAMS_UP"_PARAMS"
   export TEST_USER_PARAM=$(eval echo "$"$TEST_RES_PARAMS_STR"_TEST")
-  export TEST_USER_PARAM=$(eval echo "$"$TEST_RES_PARAMS_STR"_key1") #keyvaluetest
+  #export TEST_USER_PARAM=$(eval echo "$"$TEST_RES_PARAMS_STR"_key1") #keyvaluetest
   export TEST_SEC_PARAM=$(eval echo "$"$TEST_RES_PARAMS_STR"_DEV")
   echo TEST_RES_PARAMS_STR=$TEST_RES_PARAMS_STR
   echo TEST_USER_PARAM=$TEST_USER_PARAM
-  echo TEST_USER_PARAM=$TEST_USER_PARAM
+  #echo TEST_USER_PARAM=$TEST_USER_PARAM
   echo TEST_SECURE_PARAM=$TEST_SEC_PARAM
 }
 
