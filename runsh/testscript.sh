@@ -74,7 +74,6 @@ export TEST_RESOURCE_VERSIONNUMBER=$(eval echo "$"$TEST_RES_IN_IMG_UP"_VERSIONNU
 export TEST_RESOURCE_VERSIONID=$(eval echo "$"$TEST_RES_IN_IMG_UP"_VERSIONID")
 export TEST_RESOURCE_SOURCENAME=$(eval echo "$"$TEST_RES_IN_IMG_UP"_SOURCENAME")
 export TEST_RESOURCE_SEED_VERSIONNAME=$(eval echo "$"$TEST_RES_IN_IMG_UP"_SEED_VERSIONNAME")
-export TEST_RESOURCE_PARAMS_FIELDNAME=$(eval echo "$"$TEST_RES_IN_IMG_UP"_PARAMS_FIELDNAME")
 export TEST_RESOURCE_POINTER_FIELDNAME=$(eval echo "$"$TEST_RES_IN_IMG_UP"_POINTER_FIELDNAME")
 export TEST_RESOURCE_SEED_FIELDNAME=$(eval echo "$"$TEST_RES_IN_IMG_UP"_SEED_FIELDNAME")
 export TEST_RESOURCE_INTEGRATION_FIELDNAME=$(eval echo "$"$TEST_RES_IN_IMG_UP"_INTEGRATION_FIELDNAME")
@@ -131,14 +130,17 @@ get_params() {
   echo "-----> Env in paramas resource"
   
   export TEST_RES_PARAMS_UP=$(echo $TEST_RES_PARAMS | awk '{print toupper($0)}')
+  export TEST_RESOURCE_PARAMS_FIELDNAME=$(eval echo "$"$TEST_RES_IN_IMG_UP"_PARAMS_FIELDNAME")
   export TEST_RES_PARAMS_STR=$TEST_RES_PARAMS_UP"_PARAMS"
   export TEST_USER_PARAM=$(eval echo "$"$TEST_RES_PARAMS_STR"_TEST")
   #export TEST_USER_PARAM=$(eval echo "$"$TEST_RES_PARAMS_STR"_key1") #keyvaluetest
   export TEST_SEC_PARAM=$(eval echo "$"$TEST_RES_PARAMS_STR"_DEV")
+  echo TEST_RESOURCE_PARAMS_FIELDNAME=$TEST_RESOURCE_PARAMS_FIELDNAME
   echo TEST_RES_PARAMS_STR=$TEST_RES_PARAMS_STR
   echo TEST_USER_PARAM=$TEST_USER_PARAM
   #echo TEST_USER_PARAM=$TEST_USER_PARAM
   echo TEST_SECURE_PARAM=$TEST_SEC_PARAM
+  
 }
 
 create_out_state() {
@@ -149,7 +151,7 @@ create_out_state() {
   echo "-----> Creating a state file for $TEST_CURR_JOB"
   echo versionName=$TEST_VERSION > "$JOB_STATE/$TEST_CURR_JOB.env"
   cat "$JOB_STATE/$TEST_CURR_JOB.env"
-
+  
   echo "-----> Creating a previous state file for $TEST_CURR_JOB"
   cat "$JOB_PREVIOUS_STATE/$TEST_CURR_JOB.env"   
 }
