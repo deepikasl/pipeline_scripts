@@ -101,6 +101,7 @@ dockerhub_login() {
   
   echo TEST_DH_USERNAME=$TEST_DH_USERNAME
   echo TEST_DH_PASSWORD_LENGTH=${#TEST_DH_PASSWORD} #show only count
+  echo TEST_DH_EMAIL=$TEST_DH_EMAIL
   sudo docker login -u $TEST_DH_USERNAME -p $TEST_DH_PASSWORD -e $TEST_DH_EMAIL
 }
 
