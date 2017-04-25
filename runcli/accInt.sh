@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+echo JobTriggredByName=$JOB_TRIGGERED_BY_NAME
+echo JobTriggredByID=$JOB_TRIGGERED_BY_ID
+
 echo "-------> AWS"
 export TEST_AWS_CLI="ship_aws_cli"
 # since resources here have dashes Shippable replaces them and UPPER cases them
