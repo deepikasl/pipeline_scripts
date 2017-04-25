@@ -15,7 +15,7 @@ export TEST_CURR_JOB_UP=$(echo $TEST_CURR_JOB | awk '{print toupper($0)}')
 echo TEST_CURR_JOB=$JOB_NAME
 echo TEST_CURR_JOB_UP=$TEST_CURR_JOB_UP
 echo JobTriggredByName=$JOB_TRIGGERED_BY_NAME
-echo JobTriggredByID=$JOB_TRIGGERED_BY_ID
+echo JobTriggredById=$JOB_TRIGGERED_BY_ID
 
 #get dockerhub EN string
 export TEST_RES_DH_UP=$(echo $TEST_RES_DH | awk '{print toupper($0)}')
