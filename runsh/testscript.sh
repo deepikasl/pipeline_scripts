@@ -1,5 +1,6 @@
 #!/bin/bash -e
 
+echo 'from pr1 to pr pull request'
 export TEST_CURR_JOB="runshscript"
 export TEST_RES_DH="ship_dh"
 export TEST_RES_REPO="pipeline_scriptRepo"
