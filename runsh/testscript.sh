@@ -162,6 +162,7 @@ create_out_state() {
   echo "-----> Creating a state file for $TEST_RES_IMAGE_OUT"
   echo versionName=$TEST_REPO_VERSION > "$JOB_STATE/$TEST_RES_IMAGE_OUT.env"
   echo commitSHA=$TEST_REPO_COMMIT >> "$JOB_STATE/$TEST_RES_IMAGE_OUT.env" 
+  cat "$JOB_STATE/$TEST_RES_IMAGE_OUT.env"
   
   echo "-----> Creating a state file for $TEST_CURR_JOB"
   echo versionName=$TEST_REPO_VERSION > "$JOB_STATE/$TEST_CURR_JOB.env"
