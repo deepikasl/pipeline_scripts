@@ -3,6 +3,9 @@ export PRE_JOB=runsh-script
 export PRE_JOB_UP=$(echo ${PRE_JOB//-/} | awk '{print toupper($0)}')
 echo $PRE_JOB_UP
 
+echo JobTriggeredByName=$JOB_TRIGGERED_BY_NAME
+echo JobTriggeredById=$JOB_TRIGGERED_BY_ID
+
 export PRE_JOB_OPERATION=$(eval echo "$"$PRE_JOB_UP"_OPERATION")
 echo pre_operation=$PRE_JOB_OPERATION
 
