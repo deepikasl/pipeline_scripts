@@ -4,6 +4,7 @@ export TEST_RES_REPO="pipeline_scriptRepo"
 export TEST_RES_REPO_UP=$(echo $TEST_RES_REPO | awk '{print toupper($0)}')
 
 echo TEST_CURR_JOB=$JOB_NAME
+export TEST_CURR_JOB_UP=$(echo $TEST_CURR_JOB | awk '{print toupper($0)}')
 echo TEST_CURR_JOB_UP=$TEST_CURR_JOB_UP
 echo JobTriggredByName=$JOB_TRIGGERED_BY_NAME
 echo JobTriggredByID=$JOB_TRIGGERED_BY_ID
