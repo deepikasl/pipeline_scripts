@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-export TEST_CURR_JOB="runshscript"
+export TEST_CURR_JOB="runshscript"   
 export TEST_RES_DH="ship_dh"
 export TEST_RES_REPO="pipeline_scriptRepo"
 export TEST_RES_PARAMS="test_params"
